@@ -1,3 +1,5 @@
+[![Test Check](https://github.com/zpeng2022/edu-cpo-lab4-zpeng/actions/workflows/check.yml/badge.svg)](https://github.com/zpeng2022/edu-cpo-lab4-zpeng/actions/workflows/check.yml)
+
 # slay_the_dragon - lab #4 - variant 2
 
 This is an example project which demonstrates multi-dispatch
