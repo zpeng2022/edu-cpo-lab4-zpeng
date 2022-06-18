@@ -24,7 +24,7 @@ jobs:
           coverage report *.py
 
       - name: Check code style
-        run: pycodestyle .
+        run: pycodestyle --ignore=E111 .
 
       # type annotation checks
       - name: Type checks
