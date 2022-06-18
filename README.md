@@ -11,7 +11,6 @@ This is an example project which demonstrates multi-dispatch
 
 ## Features
 
-
 ## Contribution
 
 - Zhan,Peng (zpeng@hdu.edu.cn) -- write the main class part.
