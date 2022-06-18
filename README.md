@@ -11,6 +11,16 @@ This is an example project which demonstrates multi-dispatch
 
 ## Features
 
+- add test_type_integral
+- add test_type_text
+- add test_type_float
+- add test_optial_int_text
+- add test_optional_ints
+- add test_optional_float_int
+- add test_named_object_integers
+- add test_named_object_text
+- add test_named_object_float_int
+
 ## Contribution
 
 - Zhan,Peng (zpeng@hdu.edu.cn) -- write the main class part.
@@ -18,6 +28,8 @@ This is an example project which demonstrates multi-dispatch
 
 ## Changelog
 
+- 18.06.2022 -4
+  - add more tests
 - 18.06.2022 -3
   - disable the mypy check
   - because we need multi functions
