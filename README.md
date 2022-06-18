@@ -18,6 +18,9 @@ This is an example project which demonstrates multi-dispatch
 
 ## Changelog
 
+- 18.06.2022 -3
+  - disable the mypy check
+  - because we need multi functions
 - 18.06.2022 - 2
   - Update README.md
 - 18.06.2022 - 1
@@ -29,8 +32,6 @@ This is an example project which demonstrates multi-dispatch
 
 ## Design notes
 
-- DicHashMap and SelfHashMap
-- HashMap is below the dic
 - Advantages of unit testing:
   - it help us write better code
   - it help us catch bugs earlier
