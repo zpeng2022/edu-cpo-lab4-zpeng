@@ -1,7 +1,7 @@
-registry = {}
+registration = {}
 
 
-class MultiMethod(object):
+class Multiple(object):
     # Create a function
     def __init__(self, name):
         self.name = name
@@ -30,18 +30,18 @@ class MultiMethod(object):
     # Add a new function to the type diagram
     def register(self, types, function):
         if types in self.typemap:
-            raise TypeError("duplicate registration")
+            raise TypeError("multiple same registration")
         self.typemap[types] = function
 
 
-def multimethod(*types):
+def multiple(*types):
     def register(function):
         # add
         function = getattr(function, "__lastreg__", function)
         name = function.__name__
-        result = registry.get(name)
+        result = registration.get(name)
         if result is None:
-            result = registry[name] = MultiMethod(name)
+            result = registration[name] = Multiple(name)
         result.register(types, function)
         # add
         result.__lastreg__ = function

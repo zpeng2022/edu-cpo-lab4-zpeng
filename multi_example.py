@@ -1,33 +1,33 @@
 
 # Different methods are used depending on the type of input parameter
-from multi_method import multimethod
+from multi_method import multiple
 
 
-@multimethod(int, int)
+@multiple(int, int)
 def example_function(a, b):
     return a + b
 
 
-@multimethod(float, float)
+@multiple(float, float)
 def example_function(a, b):
     return a - b
 
 
-@multimethod(str, str)
+@multiple(str, str)
 def example_function(a, b):
     return a + b
 
 
-@multimethod(str)
-@multimethod(str, int)
+@multiple(str)
+@multiple(str, int)
 def example_function(a, b=10):
     c = str(b)
     return a + c
 
 
-@multimethod(float)
-@multimethod(float, int)
-@multimethod(float, int, int)
+@multiple(float)
+@multiple(float, int)
+@multiple(float, int, int)
 def example_function(a, b=10, c=10):
     return a + b + c
 
@@ -52,11 +52,11 @@ class E(A, D):
   pass
 
 
-@multimethod(A, D)
+@multiple(A, D)
 def example_function(arg1, arg2):
-   return 'works'
+   return 'succeed!'
 
 
-@multimethod(A, A)
+@multiple(A, A)
 def example_function(arg1, arg2):
-   return 'works'
+   return 'succeed!'

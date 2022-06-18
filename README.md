@@ -4,8 +4,8 @@ This is an example project which demonstrates multi-dispatch
 
 ## Project structure
 
-- `multi_example.py` -- implementation of multi-function by using `@multimethod`
-- `multi_method.py` -- implementation of `MultiMethod` class with
+- `multi_example.py` -- implementation of multi-function by using `@multiple`
+- `multi_method.py` -- implementation of `Multiple` class with
 - basic hash map features
 - `test_multiple_dispatch.py` -- tests for multiple_dispatch
 
