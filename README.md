@@ -1,42 +1,32 @@
-# slay_the_dragon - lab #1 - variant 7
+# slay_the_dragon - lab #4 - variant 2
 
-This is an example project which demonstrates dic structure and necessary
+This is an example project which demonstrates multi-dispatch
 
 ## Project structure
 
-- `DicHashMap.py` -- implementation of `DicHashMap` class with
+- `multi_example.py` -- implementation of `DicHashMap` class with
 - required features
-- `SelfHashMap.py` -- implementation of `SelfHashMap` class with
+- `multi_method.py` -- implementation of `SelfHashMap` class with
 - basic hash map features
-- `TestDicHashMap.py` -- unit and PBT tests for `DicHashMap`
+- `test_multiple_dispatch.py` -- tests for multiple_dispatch
 
 ## Features
 
-- PBT: `test_add`
 
 ## Contribution
 
 - Zhan,Peng (zpeng@hdu.edu.cn) -- write the main class part.
-- Zhong,ZhuZhou(212320020@hdu.edu.cn) -- write the test part.
+- Zhong,ZhuZhou(212320020@hdu.edu.cn) -- write the test part and README.md.
 
 ## Changelog
 
-- 14.04.2022 - 7
-  - delete TestDicHashMap.py and add test_DicHashMap.py
-  - update README.md and description
-- 13.04.2022 - 6
-  - add TestDicHashMap.py and update the README
-- 13.04.2022 - 5
-  - add DicHashMap.py and SelfHashMap.py files
-- 11.04.2022 -4
-  - update team member's information and group's information.
-- 30.03.2022 -3
-  - upload my code to github and test the github workflow.
-- 29.03.2022 - 2
-  - Add test coverage.
-- 29.03.2022 - 1
-  - Update README. Add formal sections.
-- 29.03.2022 - 0
+- 18.06.2022 - 2
+  - Update README.md
+- 18.06.2022 - 1
+  - add multi_example.py
+  - add multi_method.py
+  - add test_multiple_dispatch.py
+- 18.06.2022 - 0
   - Initial
 
 ## Design notes
