@@ -27,7 +27,8 @@ class TestMultimethod(unittest.TestCase):
         self.assertEqual(example_function_div(b, a),
                          np.divide(b, a).tolist())
 
-    @given(st.lists(st.integers(), min_size=1), st.lists(st.integers(), min_size=1))
+    @given(st.lists(st.integers(), min_size=1),
+           st.lists(st.integers(), min_size=1))
     def test_matrix_add_integers(self, a, b):
         if len(a) > len(b):
             a = a[:len(b)]
@@ -39,7 +40,8 @@ class TestMultimethod(unittest.TestCase):
         self.assertEqual(example_function(matrix_a, matrix_b),
                          np.add(matrix_a, matrix_b).tolist())
 
-    @given(st.lists(st.integers(), min_size=1), st.lists(st.integers(), min_size=1))
+    @given(st.lists(st.integers(), min_size=1),
+           st.lists(st.integers(), min_size=1))
     def test_matrix_mul_integers(self, a, b):
         if len(a) > len(b):
             a = a[:len(b)]
