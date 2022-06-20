@@ -36,9 +36,12 @@ This is an example project which demonstrates multi-dispatch
 
 ## Changelog
 
-- 18.06.2022 -4
+- 20.06.2022 - 5
+  - add * and / and - operations for numeral
+  - add more PBT tests for that
+- 18.06.2022 - 4
   - add more tests
-- 18.06.2022 -3
+- 18.06.2022 - 3
   - disable the mypy check
   - because we need multi functions
 - 18.06.2022 - 2
