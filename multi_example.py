@@ -1,6 +1,7 @@
 
 # Different methods are used depending on the type of input parameter
 from multi_method import multiple
+import numpy as np
 
 
 @multiple(int, int)
@@ -64,6 +65,21 @@ def example_function_div(a, b=1):
 @multiple(float, int, int)
 def example_function_div(a, b=1, c=2):
     return a / (b * c)
+
+
+@multiple(np.ndarray, np.ndarray)
+def example_function(a, b):
+    return np.add(a, b).tolist()
+
+
+@multiple(np.ndarray, np.ndarray)
+def example_function_mul(a, b):
+    return np.multiply(a, b).tolist()
+
+
+@multiple(np.ndarray, np.ndarray)
+def example_function_div(a, b):
+    return np.divide(a, b).tolist()
 
 
 class A(object):

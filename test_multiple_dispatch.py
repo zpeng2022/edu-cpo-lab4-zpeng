@@ -2,11 +2,27 @@ import unittest
 import math
 from hypothesis import given
 import hypothesis.strategies as st
+import numpy as np
 
 from multi_example import *
 
 
 class TestMultimethod(unittest.TestCase):
+
+    def test_matrix_add(self):
+        a = np.ones((3, 4))
+        b = np.zeros((3, 4))
+        self.assertEqual(example_function(a, b), np.add(a, b).tolist())
+
+    def test_matrix_mul(self):
+        a = np.ones((3, 4))
+        b = np.zeros((4, 3))
+        self.assertEqual(example_function_mul(a, b), np.multiply(a, b).tolist())
+
+    def test_matrix_mul(self):
+        a = np.ones((3, 4))
+        b = np.zeros((3, 4))
+        self.assertEqual(example_function_div(b, a), np.divide(b, a).tolist())
 
     def test_function_mul(self):
         self.assertEqual(example_function_mul(1), 1)
