@@ -39,6 +39,9 @@ This is an example project which demonstrates multi-dispatch
 
 ## Changelog
 
+- 20.06.2022 - 6
+  - add * and / and + operations for matrix
+  - add PBT tests for matrix
 - 20.06.2022 - 5
   - add * and / and - operations for numeral
   - add more PBT tests for that
