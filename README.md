@@ -44,7 +44,7 @@ This is an example project which demonstrates multi-dispatch
   - add PBT tests for matrix
 - 20.06.2022 - 5
   - add * and / and - operations for numeral
-  - add more PBT tests for that
+  - add more PBT tests for that(mul/div etc.)
 - 18.06.2022 - 4
   - add more tests
 - 18.06.2022 - 3
