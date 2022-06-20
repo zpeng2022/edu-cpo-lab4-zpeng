@@ -27,6 +27,40 @@ class TestMultimethod(unittest.TestCase):
         self.assertEqual(example_function_div(b, a),
                          np.divide(b, a).tolist())
 
+    @given(st.lists(st.integers(), min_size=1), st.lists(st.integers(), min_size=1))
+    def test_matrix_add_integers(self, a, b):
+        if len(a) > len(b):
+            a = a[:len(b)]
+        if len(b) > len(a):
+            b = b[:len(a)]
+        matrix_a = np.array(a)
+        matrix_b = np.array(b)
+
+        self.assertEqual(example_function(matrix_a, matrix_b),
+                         np.add(matrix_a, matrix_b).tolist())
+
+    @given(st.lists(st.integers(), min_size=1), st.lists(st.integers(), min_size=1))
+    def test_matrix_mul_integers(self, a, b):
+        if len(a) > len(b):
+            a = a[:len(b)]
+        if len(b) > len(a):
+            b = b[:len(a)]
+        matrix_a = np.array(a)
+        matrix_b = np.array(b)
+        self.assertEqual(example_function_mul(matrix_a, matrix_b),
+                         np.multiply(matrix_a, matrix_b).tolist())
+
+    @given(st.lists(st.integers()), st.lists(st.integers()))
+    def test_matrix_div_integers(self, a, b):
+        if len(a) > len(b):
+            a = a[:len(b)]
+        if len(b) > len(a):
+            b = b[:len(a)]
+        matrix_a = np.array(a)
+        matrix_b = np.ones(len(a))
+        self.assertEqual(example_function_div(matrix_a, matrix_b),
+                         np.divide(matrix_a, matrix_b).tolist())
+
     def test_function_mul(self):
         self.assertEqual(example_function_mul(1), 1)
         self.assertEqual(example_function_mul(1, 3), 3)
