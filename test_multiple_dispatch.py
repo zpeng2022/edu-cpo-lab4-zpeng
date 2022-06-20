@@ -8,6 +8,42 @@ from multi_example import *
 
 class TestMultimethod(unittest.TestCase):
 
+    def test_function_mul(self):
+        self.assertEqual(example_function_mul(1), 1)
+        self.assertEqual(example_function_mul(1, 3), 3)
+        self.assertEqual(example_function_mul(1.0), 2.0)
+
+    @given(st.integers(), st.integers())
+    def test_function_mul_integers(self, a, b):
+        self.assertEqual(example_function_mul(a), a)
+        self.assertEqual(example_function_mul(a, b), a * b)
+
+    @given(st.floats(), st.integers(), st.integers())
+    def test_function_mul_float_integers(self, a, b, c):
+        if math.isnan(a) is False and math.isinf(a) is False:
+            self.assertEqual(example_function_mul(a), a * 2)
+            self.assertEqual(example_function_mul(a, b), a * b * 2)
+            self.assertEqual(example_function_mul(a, b, c), a * b * c)
+
+    def test_function_div(self):
+        self.assertEqual(example_function_div(4, 2), 2)
+        self.assertEqual(example_function_div(4), 4)
+        self.assertEqual(example_function_div(2.0), 1.0)
+
+    @given(st.integers(), st.integers())
+    def test_function_div_integers(self, a, b):
+        self.assertEqual(example_function_div(a), float(a))
+        if b != 0:
+            self.assertEqual(example_function_div(a, b), float(a / b))
+
+    @given(st.floats(), st.integers(), st.integers())
+    def test_function_div_float_integers(self, a, b, c):
+        if math.isnan(a) is False and math.isinf(a) is False\
+                and b != 0 and c != 0:
+            self.assertEqual(example_function_div(a), a / 2)
+            self.assertEqual(example_function_div(a, b), a / (2 * b))
+            self.assertEqual(example_function_div(a, b, c), a / (b * c))
+
     # 1.Run different functions for different types
     def test_type_unittest(self):
         self.assertEqual(example_function('1', 10), '110')

@@ -32,6 +32,40 @@ def example_function(a, b=10, c=10):
     return a + b + c
 
 
+@multiple(int, int)
+def example_function_mul(a, b):
+    return a * b
+
+
+@multiple(int)
+def example_function_mul(a, b=1):
+    return a * b
+
+
+@multiple(float)
+@multiple(float, int)
+@multiple(float, int, int)
+def example_function_mul(a, b=1, c=2):
+    return a * b * c
+
+
+@multiple(int, int)
+def example_function_div(a, b):
+    return float(a / b)
+
+
+@multiple(int)
+def example_function_div(a, b=1):
+    return float(a / b)
+
+
+@multiple(float)
+@multiple(float, int)
+@multiple(float, int, int)
+def example_function_div(a, b=1, c=2):
+    return a / (b * c)
+
+
 class A(object):
   pass
 
