@@ -28,6 +28,9 @@ This is an example project which demonstrates multi-dispatch
 - add test_function_div
 - add test_function_div_integers
 - add test_function_div_float_integers
+- add test_matrix_add_integers
+- add test_matrix_mul_integers
+- add test_matrix_div_integers
 
 ## Contribution
 
