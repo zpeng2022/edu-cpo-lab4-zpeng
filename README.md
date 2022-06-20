@@ -22,6 +22,12 @@ This is an example project which demonstrates multi-dispatch
 - add test_named_object_integers
 - add test_named_object_text
 - add test_named_object_float_int
+- add test_function_mul
+- add test_function_mul_integers
+- add test_function_mul_float_integers
+- add test_function_div
+- add test_function_div_integers
+- add test_function_div_float_integers
 
 ## Contribution
 
